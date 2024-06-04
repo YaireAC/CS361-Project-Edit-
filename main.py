@@ -92,15 +92,15 @@ def run_microservice(script_name):
 
 def manage_saved_artists():
     print("Starting Microservice A...")
-    process_a = run_microservice('microc.py')
+    process_a = run_microservice('microA.py')
     process_a.wait()  # Wait for Microservice A to finish
 
     print("Microservice A finished. Starting Microservice B...")
-    process_b = run_microservice('main.py')
+    process_b = run_microservice('microB.py')
     process_b.wait()  # Wait for Microservice B to finish
 
     print("Microservice B finished. Starting Microservice C...")
-    process_c = run_microservice('microb.py')
+    process_c = run_microservice('microC.py')
     process_c.wait()  # Wait for Microservice C to finish
 
     # Demonstrate that each is running in a separate process
